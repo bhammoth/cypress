@@ -82,7 +82,8 @@ describe('Rocket Miles_textbox: Select Reward Program', function() {
 
 describe('Rocket Miles-Date Selector', function() {
 
-  it.only('Seelct Daets', function() {
+  it('Select Dates', function() {
+    //Exract to own function pass in checkinDate, checkoutDate
     cy.get('.booking-date-range').children().first().should('have.class','checkin booking-date').click()
     cy.get('.ui-datepicker-calendar').children().next().children().children()
     .children().eq(18).click()
