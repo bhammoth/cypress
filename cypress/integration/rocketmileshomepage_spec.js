@@ -1,13 +1,12 @@
-//cy.get('ul#todos').as('todos')
-
+//TODO: Need to closures to set get selectors for mantainability
 
 beforeEach(function () {
   ///Relading the page is the only way to ensure the email sign up isnt in the way of the elements.
   //Couldnt find anything different in the DOM or session to use a conditional with
   cy.visit('https://www.rocketmiles.com/')
-  cy.get('body').children()
-
-  //cy.reload()
+  cy.reload();//temporary // FIXME:
+  //TODO: need to add logic to signup email to close if present
+  //cy.get('body').children()
 })
 
 //Move this to support folder, and normally data setup would be done through API if available
@@ -81,18 +80,20 @@ describe('Rocket Miles_textbox: Select Reward Program', function() {
 })
 
 describe('Rocket Miles-Date Selector', function() {
-
-  it('Select Dates', function() {
-    //Exract to own function pass in checkinDate, checkoutDate
+//TODO: Extract to function and pass in checkinDate, checkoutDate
+  it.only('Select Dates', function() {
     cy.get('.booking-date-range').children().first().should('have.class','checkin booking-date').click()
     cy.get('.ui-datepicker-calendar').children().next().children().children()
     .children().eq(18).click()
     cy.get('.booking-date-range').children().eq(2).should('have.class','checkout booking-date').click()
     cy.get('.ui-datepicker-calendar').children().next().children().children()
     .children().eq(21).click()
-
-
-    //cy.get('#dp1557884406721')//after
-    //cy.get('.ui-datepicker-calendar').contains('15')
   })
 })
+
+//TODO: Add tests for guest dropdown
+describe('Rocket Miles Guests Dropdown', function() {
+   })
+  //TODO: Add tests for rooms dropdown
+describe('Rocket Miles Rooms Dropdown', function() {
+   })
