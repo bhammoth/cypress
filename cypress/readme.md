@@ -6,4 +6,4 @@ https://docs.cypress.io/guides/getting-started/installing-cypress.html#System-re
 The location where this project is saved: <br />
 cd /your/project/path<br /><br />
 npm install cypress --save-dev<br />
-Run Command to open Cypress: $(npm bin)/cypress open where the project location is. <br />
+Run Command to open Cypress: $(npm bin)/cypress (open where the project location is.) <br />
