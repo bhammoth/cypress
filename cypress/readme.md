@@ -8,4 +8,6 @@ cd /your/project/path<br /><br />
 npm install cypress --save-dev<br />
 Run Command to open Cypress: $(npm bin)/cypress (open where the project location is.) <br />
 
-Test file is under integrations
+Test file is under integrations<br />
+
+API tests have are used against a test uri: https://reqres.in/api/
